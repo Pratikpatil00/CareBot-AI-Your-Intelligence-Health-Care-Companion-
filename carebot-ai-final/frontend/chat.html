@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CareBot AI — AI Health Assistant</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/features.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <div class="sidebar" id="sidebar-root"></div>
+    <div class="main">
+      <div class="topbar" id="topbar-root"></div>
+      <div class="page-content" style="padding:40px;">
+
+        <div class="chat-layout">
+          <div class="chat-main">
+            <div class="panel chat-panel">
+              <div class="chat-header">
+                <div class="icon-badge gradient" style="width:32px;height:32px;font-size:14px;">🤖</div>
+                <div>
+                  <div style="font-weight:700;font-size:13.5px;">CareBot Assistant</div>
+                  <div class="status-online"><span class="status-dot"></span> Online</div>
+                </div>
+              </div>
+
+              <div class="chat-messages" id="chatMessages"></div>
+
+              <div class="quick-actions-row">
+                <button class="quick-action-btn" data-quick="Summarize">📝 Summarize</button>
+                <button class="quick-action-btn" data-quick="Analyze vitals">📊 Analyze vitals</button>
+                <button class="quick-action-btn" data-quick="Find specialist">🩺 Find specialist</button>
+              </div>
+
+              <div class="chat-input-row">
+                <input class="field-input" id="chatInput" type="text" placeholder="Message CareBot…" style="flex:1;" />
+                <button class="send-btn" id="sendBtn">➤</button>
+              </div>
+            </div>
+            <p class="disclaimer">CareBot AI provides general health information and is not a substitute for professional medical advice.</p>
+          </div>
+
+          <div class="chat-side">
+            <div class="panel side-panel">
+              <div class="section-label">Connected Sources</div>
+              <div class="source-row"><div class="icon-badge blue" style="width:30px;height:30px;font-size:13px;">📄</div>
+                <div style="flex:1;font-size:12.5px;font-weight:600;">Medical Reports</div><span class="pill pill-green">Active</span></div>
+              <div class="source-row"><div class="icon-badge red" style="width:30px;height:30px;font-size:13px;">❤</div>
+                <div style="flex:1;font-size:12.5px;font-weight:600;">Vitals History</div><span class="pill pill-green">Active</span></div>
+              <div class="source-row"><div class="icon-badge green" style="width:30px;height:30px;font-size:13px;">🩻</div>
+                <div style="flex:1;font-size:12.5px;font-weight:600;">X-Ray Records</div><span class="pill pill-green">Active</span></div>
+            </div>
+
+            <div class="panel side-panel">
+              <div class="section-label">Quick Shortcuts</div>
+              <div class="shortcut-row"><div class="icon-badge purple" style="width:30px;height:30px;font-size:13px;">💊</div>
+                <div style="flex:1;font-size:12.5px;font-weight:600;">Log a dose</div><span style="color:var(--text-muted);">›</span></div>
+              <div class="shortcut-row"><div class="icon-badge purple" style="width:30px;height:30px;font-size:13px;">📈</div>
+                <div style="flex:1;font-size:12.5px;font-weight:600;">View trends</div><span style="color:var(--text-muted);">›</span></div>
+              <div class="shortcut-row"><div class="icon-badge purple" style="width:30px;height:30px;font-size:13px;">🏥</div>
+                <div style="flex:1;font-size:12.5px;font-weight:600;">Find a hospital</div><span style="color:var(--text-muted);">›</span></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="js/constants.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/chat.js"></script>
+</body>
+</html>

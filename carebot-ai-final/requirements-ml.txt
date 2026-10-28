@@ -1,0 +1,6 @@
+# Optional: only for training/running your own supervised models.
+# Use Python 3.11/3.12; these packages are not needed for normal Groq operation.
+tensorflow>=2.16,<3
+scikit-learn>=1.5,<2
+joblib>=1.4,<2
+numpy>=1.26,<3

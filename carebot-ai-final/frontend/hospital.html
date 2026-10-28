@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CareBot AI — Hospital Finder</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/features.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <div class="sidebar" id="sidebar-root"></div>
+    <div class="main">
+      <div class="topbar" id="topbar-root"></div>
+      <div class="page-content">
+        <div class="panel" style="padding:34px;max-width:640px;">
+          <div class="icon-badge orange" style="width:56px;height:56px;font-size:24px;">🏥</div>
+          <div class="headline" style="font-weight:800;font-size:20px;margin:16px 0 8px;">Hospital Finder</div>
+          <p style="font-size:13.5px;color:var(--text-muted);line-height:1.7;margin-bottom:18px;">Locate nearby hospitals and clinics from reliable sources, connected to the specialist recommendation for a smoother next step.</p>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;">
+            <span class="pill pill-indigo">Location-based</span><span class="pill pill-indigo">Reliable sources</span>
+          </div>
+          <form id="mapForm" class="feature-form"><label class="field-label">Search places<input class="field-input" id="mapSearch" placeholder="Hospital name, specialty, clinic or pharmacy"></label><label class="field-label">Facility type<select class="field-input" id="mapType"><option value="hospital">Hospitals</option><option value="doctor">Clinics / doctors</option><option value="pharmacy">Medical stores / pharmacies</option></select></label><label class="field-label">Search radius<select class="field-input" id="mapRadius"><option value="5000">5 km</option><option value="10000">10 km</option><option value="25000">25 km</option></select></label><button class="btn-gradient">Search nearby</button></form><button id="locateMe" class="btn-outline" style="margin-top:14px;">Use my location</button><form id="addressForm" class="feature-form"><label class="field-label">Or choose a city/address<input class="field-input" id="mapAddress" placeholder="Akola, Maharashtra" required></label><button class="btn-outline">Set search location</button></form><div id="addressChoices" class="feature-result"></div><p id="searchLocation" class="feature-result"></p><div id="map" aria-label="Nearby healthcare map"></div><div id="placeDetails" class="feature-result"></div><p class="disclaimer">MapmyIndia / Mappls supplies place data. Ratings and opening status depend on provider coverage and your API plan.</p><div id="routeSummary" class="feature-result"></div><div id="placesList" class="feature-result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/constants.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/hospital.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CareBot AI — Water Tracker</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/features.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <div class="sidebar" id="sidebar-root"></div>
+    <div class="main">
+      <div class="topbar" id="topbar-root"></div>
+      <div class="page-content">
+        <div class="panel" style="padding:34px;max-width:640px;">
+          <div class="icon-badge blue" style="width:56px;height:56px;font-size:24px;">💧</div>
+          <div class="headline" style="font-weight:800;font-size:20px;margin:16px 0 8px;">Water Tracker</div>
+          <p style="font-size:13.5px;color:var(--text-muted);line-height:1.7;margin-bottom:18px;">Log daily hydration against a personal target, with gentle reminders spaced through the day.</p>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;">
+            <span class="pill pill-indigo">Daily target</span><span class="pill pill-indigo">Reminders</span>
+          </div>
+          <form id="waterForm" class="feature-form"><label class="field-label">Water amount (mL)<input class="field-input" id="waterAmount" type="number" required min="1" max="3000" value="250"></label><button class="btn-gradient" type="submit">Log water</button></form><form id="waterSettings" class="feature-form"><label class="field-label">Daily target (mL)<input class="field-input" id="waterTarget" type="number" required min="250" max="6000" value="2000"></label><label class="field-label">Reminder interval (minutes, 0 = off)<input class="field-input" id="waterInterval" type="number" required min="0" max="240" value="60"></label><button class="btn-gradient" type="submit">Save hydration settings</button></form><p class="disclaimer">Use a personal target agreed with your clinician if you have a fluid restriction.</p><button class="btn-outline" id="waterReminders">Enable reminders + browser notifications</button><button class="btn-outline" id="testWaterReminder">Test reminder</button><p id="waterReminderStatus" class="feature-result" role="status"></p><div id="waterSummary" class="feature-result"></div><div id="waterLogs"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/constants.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/water.js"></script>
+</body>
+</html>

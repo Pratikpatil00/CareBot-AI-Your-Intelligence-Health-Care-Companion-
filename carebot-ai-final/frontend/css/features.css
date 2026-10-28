@@ -1,0 +1,26 @@
+/* Styles for newly implemented controls only. Original style.css is unchanged. */
+.feature-panel { padding: 26px; margin-top: 22px; max-width: 800px; }
+.feature-form { display: grid; gap: 14px; margin-top: 20px; }
+.feature-form .field-label { margin-bottom: 6px; }
+.feature-row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+.feature-row > label { flex: 1 1 180px; }
+textarea.field-input, select.field-input { width:100%;padding:12px 14px;border:1.5px solid var(--line);border-radius:12px;font:14px 'Inter',sans-serif;background:#FBFBFF; }
+textarea.field-input { min-height: 90px; resize: vertical; }
+.feature-result { font-size: 13.5px; line-height: 1.7; overflow-wrap: anywhere; }
+.feature-result p { white-space: pre-wrap; }
+.feature-item { border-top: 1px solid var(--line); padding: 14px 0; }
+.feature-item h3 { margin: 0 0 8px; font-size: 15px; }
+.feature-item .btn-outline { margin: 8px 6px 0 0; }
+pre { white-space:pre-wrap;overflow-wrap:anywhere;font-size:12px; }
+button:disabled { opacity:.6;cursor:wait; }
+#app-notice { margin:0 0 18px; }
+#map { height:380px;border-radius:12px;margin-top:18px; }
+.msg-bubble { white-space:pre-wrap;overflow-wrap:anywhere; }
+.mobile-menu { display:none; }
+@media(max-width:900px){.mobile-menu{display:inline-block;margin-bottom:12px;}}
+
+.reminder-banner { padding:18px;margin-bottom:18px;border:2px solid var(--indigo); }
+.reminder-banner p { margin:8px 0; }
+#patientDetail dt { font-weight:600;margin-top:8px;text-transform:capitalize; }
+#patientDetail dd { margin:4px 0 10px;white-space:pre-wrap; }
+.login-card { margin:24px 0; }

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CareBot AI — Report Analyzer</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/features.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <div class="sidebar" id="sidebar-root"></div>
+    <div class="main">
+      <div class="topbar" id="topbar-root"></div>
+      <div class="page-content">
+
+        <div class="panel" style="padding:30px;max-width:800px;">
+          <div id="uploadStage" class="dropzone">
+            <div style="display:flex;justify-content:center;margin-bottom:16px;">
+              <div class="icon-badge gradient" style="width:56px;height:56px;font-size:24px;">☁</div>
+            </div>
+            <div class="headline" style="font-weight:700;font-size:18px;margin-bottom:6px;">Drag & drop files here</div>
+            <p style="color:var(--text-muted);font-size:13px;margin-bottom:4px;">or click to browse</p>
+            <p style="color:var(--text-muted);font-size:12px;">Supported: PDF, PNG, JPG, WEBP, DOCX, TXT, CSV (10 MB)</p>
+            <div style="margin-top:18px;"><button class="btn-gradient" id="uploadBtn">Choose a file to upload</button></div>
+            <input type="file" id="fileInput" style="display:none;" accept=".pdf,.png,.jpg,.jpeg,.webp,.docx,.txt,.csv" />
+          </div>
+
+          <div id="processingStage" style="display:none;text-align:center;padding:44px 0;">
+            <div class="headline" style="font-weight:700;font-size:18px;margin-bottom:10px;" id="processingFileName"></div>
+            <p style="color:var(--text-muted);font-size:13.5px;">Running OCR extraction and structuring fields</p>
+          </div>
+
+          <div id="doneStage" style="display:none;">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;">
+              <div style="display:flex;align-items:center;gap:12px;">
+                <div class="icon-badge blue" style="width:40px;height:40px;font-size:18px;">📄</div>
+                <div>
+                  <div class="headline" style="font-weight:700;font-size:17px;" id="doneFileName"></div>
+                  <div id="fieldCount" style="font-size:12.5px;color:var(--text-muted);"></div>
+                </div>
+              </div>
+              <button class="btn-outline" id="uploadAnotherBtn">Upload another</button>
+            </div>
+
+            <table class="data-table" style="margin-bottom:24px;">
+              <thead><tr><th>Test</th><th>Value</th><th>Reference range</th><th>Status</th></tr></thead>
+              <tbody id="reportFieldsBody"></tbody>
+            </table>
+
+            <div class="section-label">In plain language</div>
+            <p id="reportExplanation" style="font-size:13.5px;line-height:1.7;white-space:pre-wrap;"></p><details><summary>Original extracted text</summary><pre id="rawText"></pre></details>
+          </div>
+        </div>
+        <div class="panel feature-panel"><div class="section-label">Report history</div><div id="reportHistory"></div></div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="js/constants.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/reports.js"></script>
+</body>
+</html>

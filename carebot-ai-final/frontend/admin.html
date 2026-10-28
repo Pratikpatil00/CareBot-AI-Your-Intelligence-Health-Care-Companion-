@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CareBot AI — Administration</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/features.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <div class="sidebar" id="sidebar-root"></div>
+    <div class="main">
+      <div class="topbar" id="topbar-root"></div>
+      <div class="page-content">
+        <div class="panel feature-panel">
+          <h2>Patients / customers</h2>
+          <form id="patientSearch" class="feature-form"><label class="field-label">Search account name<input id="patientQuery" class="field-input" maxlength="120"></label><button class="btn-gradient">Search patients</button></form>
+          <p id="patientCount"></p><div id="patientList" class="feature-result"></div>
+          <div class="feature-row"><button id="patientsPrev" class="btn-outline">Previous</button><button id="patientsNext" class="btn-outline">Next</button></div>
+        </div>
+        <div id="patientDetail" class="panel feature-panel" hidden></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/constants.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

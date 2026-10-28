@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CareBot AI — Login</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/features.css" />
+</head>
+<body>
+  <div class="login-wrap">
+    <div style="position:absolute;width:420px;height:420px;border-radius:50%;
+      background:radial-gradient(circle, #4F46E522, transparent 70%); top:-120px; left:-120px;"></div>
+    <div style="position:absolute;width:360px;height:360px;border-radius:50%;
+      background:radial-gradient(circle, #9333EA22, transparent 70%); bottom:-100px; right:-100px;"></div>
+
+    <div class="login-card">
+      <div class="login-left">
+        <div>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <div style="width:34px;height:34px;border-radius:10px;background:rgba(255,255,255,0.2);
+              display:flex;align-items:center;justify-content:center;font-size:17px;">🤖</div>
+            <span style="font-weight:800;font-size:15px;">CareBot AI</span>
+          </div>
+          <h1>Your intelligent healthcare companion.</h1>
+          <p>Chat about symptoms, understand reports, track vitals, and stay on top of medicines — all in one connected profile.</p>
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;">
+          <span class="tag-pill">Generative AI</span>
+          <span class="tag-pill">OCR Reports</span>
+          <span class="tag-pill">X-Ray Insights</span>
+          <span class="tag-pill">Smart Reminders</span>
+        </div>
+      </div>
+
+      <div class="login-right">
+        <h2>Administrator sign in</h2>
+        <p class="sub">Sign in with an administrator account created by the project owner.</p>
+
+        <label class="field-label">Full name</label>
+        <input class="field-input" id="nameInput" autocomplete="username" type="text" maxlength="120" placeholder="e.g. Vidhi Sharma" />
+
+        <label class="field-label" style="margin-top:16px;">Password</label>
+        <input class="field-input" id="passwordInput" type="password" autocomplete="current-password" placeholder="••••••••" />
+
+        <label class="consent-row">
+          <input id="consentInput" type="checkbox" /> I will access patient information only for authorized administration
+        </label>
+
+        <button class="btn-gradient" id="loginBtn" style="margin-top:24px;width:100%;">Log in and continue →</button>
+
+        <p style="margin-top:16px;font-size:12px;color:var(--text-muted);text-align:center;">
+          <a href="index.html">Patient sign in</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/admin-login.js"></script>
+</body>
+</html>
